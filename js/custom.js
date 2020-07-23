@@ -3,6 +3,15 @@ jQuery(document).ready(function( $ ) {
   // Preloader
   $(window).on('load', function() {
     $('#preloader').delay(100).fadeOut('slow',function(){$(this).remove();});
+  
+  if(window.location.href.indexOf("#") > -1){
+    var url_split = $(location).attr("href").split("#");
+    var current = "#"+url_split[1]+"-nav";
+    $('.nav-menu .menu-active').removeClass('menu-active');
+    $(String(current)).closest('li').addClass('menu-active');
+  }
+        
+    
   });
 
   // Hero rotating texts
@@ -63,6 +72,7 @@ jQuery(document).ready(function( $ ) {
   $('a[href*="#"]:not([href="#"])').on('click', function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
           var target = $(this.hash);
+          /*alert(location.hostname);*/
           if (target.length) {
               
               var top_space = 0;
@@ -89,6 +99,7 @@ jQuery(document).ready(function( $ ) {
               return false;
           }
       }
+
   });
   
   // Back to top button
