@@ -495,7 +495,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 #about {
   background: #fff;
-  padding: 80px 0;
+  padding: 40px 0;
+}
+
+@media screen and (min-width: 720px){
+  #about{
+    padding: 80px 0;
+  }
 }
 
 #about .about-img {
@@ -591,7 +597,21 @@ body.mobile-nav-active #mobile-nav-toggle {
 #subscribe {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/subs3.jpg) fixed center center;
   background-size: cover;
-  padding: 80px 0;
+  padding: 20px 0;
+}
+
+#subscribe p {
+    margin : 0 0 0 0;
+  }
+
+@media screen and (min-width: 720px){
+  #subscribe{
+    padding: 70px 0;
+  }
+
+  #subscribe p {
+    margin : 0 0 30px 0;
+  }
 }
 
 #subscribe .subscribe-title {
@@ -632,8 +652,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Portfolio Section
 --------------------------------*/
 #portfolio {
-  background: #fff;
-  padding: 80px 0;
+  background: #000;
+  padding: 40px 0;
 }
 
 #portfolio .portfolio-item {
@@ -675,15 +695,33 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #portfolio .portfolio-item:hover .details {
-  opacity: 0.8;
+  opacity: 0.4;
 }
 
 #portfolio .portfolio-item:hover .details h4 {
   transform: translate3d(0, 0, 0);
+  color: #000;
+  opacity: 1;
 }
 
 #portfolio .portfolio-item:hover .details span {
   transform: translate3d(0, 0, 0);
+}
+
+#portfolio .section-title{
+  color: #fff;
+
+}
+
+@media screen and (min-width: 720px){
+  #portfolio{
+    background-color: rgb(255, 255, 255);
+    padding : 80px 0;
+  }
+
+  #portfolio .section-title{
+    color: #111;
+    }
 }
 
 /* Testimonials Section
@@ -799,8 +837,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 #contact {
   background: #f7f7f7;
-  padding: 80px 0;
+  padding: 40px 0;
 }
+
+@media screen and (min-width: 720px){
+  #contact{
+    padding: 80px 0;
+  }
+}
+
 
 #contact .info {
   color: #333333;
@@ -895,16 +940,23 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #gallery{
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   padding-top: 50px;
   padding-bottom: 80px;
 }
 
 #gallery .section-title{
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 #team{
   padding-top: 50px;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
+}
+
+@media screen and (min-width: 720px){
+  #team{
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
 }
